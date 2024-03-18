@@ -1,25 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import MoodSelector from './MoodSelector';
+function App() { 
+  
+  const handleSubmit = (selectedMood) => {
+    console.log(`Humeur sélectionnée: ${selectedMood}`);
+    // Vous pouvez stocker les données localement ou les envoyer à une console/log ici
+    alert(`Merci pour votre humeur: ${selectedMood}.`);
+  };
 
-function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div className='flex h-auto justify-center w-auto items-center'>
+      <MoodSelector onSubmit={handleSubmit} />
     </div>
   );
 }
-
 export default App;
