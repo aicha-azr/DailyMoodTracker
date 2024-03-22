@@ -5,7 +5,6 @@ function App() {
   
   const handleSubmit = (selectedMood) => {
     console.log(`Humeur sélectionnée: ${selectedMood}`);
-    // Vous pouvez stocker les données localement ou les envoyer à une console/log ici
     alert(`Merci pour votre humeur: ${selectedMood}.`);
   };
 

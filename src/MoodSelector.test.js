@@ -1,20 +1,30 @@
 import React from 'react';
-import { render, fireEvent, screen } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import MoodSelector from './MoodSelector';
+
+test('rendu initial du composant MoodSelector', () => {
+  render(<MoodSelector />);
+
+});
 
 test('sélectionne et soumet une humeur', () => {
   const onSubmitMock = jest.fn();
-  render(<MoodSelector onSubmit={onSubmitMock} />);
+  const { getByText } = render(<MoodSelector onSubmit={onSubmitMock} />);
 
-  // Sélectionne l'humeur "heureux"
-  fireEvent.click(screen.getByText('Heureux'));
+ 
+  fireEvent.click(getByText('Heureux'));
+  fireEvent.click(getByText('Triste'));  
+  fireEvent.click(getByText('En colère')); 
+  
+  expect(getByText('heureux')).toBeInTheDocument();
+  expect(getByText('Triste')).toBeInTheDocument();
+  expect(getByText('En colère')).toBeInTheDocument();
 
-  // Vérifie si l'humeur sélectionnée est affichée correctement
-  expect(screen.getByText('heureux')).toBeInTheDocument();
+  
+  fireEvent.click(getByText('Soumettre'));
 
-  // Soumet l'humeur sélectionnée
-  fireEvent.click(screen.getByText('Soumettre'));
-
-  // Vérifie si le callback onSubmit a été appelé avec l'humeur sélectionnée
+ 
   expect(onSubmitMock).toHaveBeenCalledWith('heureux');
+  expect(onSubmitMock).toHaveBeenCalledWith('Triste');
+  expect(onSubmitMock).toHaveBeenCalledWith('En colère');
 });

@@ -9,7 +9,7 @@ function MoodSelector({ onSubmit }) {
   
     const handleSubmit = () => {
       onSubmit(selectedMood);
-      setSelectedMood(null); // Réinitialiser l'humeur sélectionnée après la soumission
+      setSelectedMood(null); 
     };
   
     return (
@@ -19,7 +19,7 @@ function MoodSelector({ onSubmit }) {
           <button className="p-1 border border-black bg-green-200 rounded-md" onClick={() => handleMoodSelect('heureux')}>Heureux</button>
           <button className="p-1 border border-black bg-gray-200 rounded-md" onClick={() => handleMoodSelect('triste')}>Triste</button>
           <button className="p-1 border border-black bg-red-200 rounded-md" onClick={() => handleMoodSelect('en colère')}>En colère</button>
-          {/* Ajoutez d'autres boutons pour d'autres humeurs si nécessaire */}
+         
         </div>
         <button className="p-1 bg-slate-100 border border-yellow-200 rounded-md" onClick={handleSubmit}>Soumettre</button>
       </div>
