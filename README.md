@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# DailyMoodTracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+DailyMoodTracker is a web application aimed at enabling users to swiftly record their daily mood through a simple and intuitive web interface. This application will be a widget that can be integrated into any web page, providing users with a quick and easy way to track their emotional state on a daily basis. Developed using React for the frontend, Docker for containerization, and Jest for unit testing, DailyMoodTracker focuses on ease of use, accessibility, and simplicity of deployment.
 
-## Available Scripts
+## Development of the Application
 
-In the project directory, you can run:
+### Initialization
+Setting up the development environment, creating the React project with Create React App, and initial Docker configuration.
 
-### `npm start`
+### Main Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Mood Selection
+A simple interface allowing the user to select their current mood from various options (happy, sad, angry, etc.) in the form of icons or buttons.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Submission
+A button to submit the selected mood. For simplicity, data can be stored locally or sent to a console/log for this one-day project.
 
-### `npm test`
+#### Confirmation Display
+Confirmation message post-submission, thanking the user for their input.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Tests
+Development of unit tests with Jest and React Testing Library, covering key features of the feedback widget, including user interaction and correct component display.
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### Dockerization
+Using Docker to containerize the application, facilitating its deployment and execution in different environments.
 
-### `npm run build` fails to minify
+#### Publishing
+Publishing the Docker image on Docker Hub.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Objective of this Brief
+Utilize React and Tailwind for developing modern and responsive user interfaces.
+Experiment with containerization of frontend applications using Docker, improving the portability and ease of deployment of web applications.
+Apply unit testing principles to ensure the stability and reliability of the application, using Jest and React Testing Library.
